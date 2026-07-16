@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montenegrin Gothic One", serif;
+  color: #f2f0e6;
+}
+body {
+  position: relative;
+}
+nav {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80px;
+  border-radius: 999px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08); /* Translucent background */
+  backdrop-filter: blur(12px); /* Blurs content behind the navbar */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+
+  /* Highlights & Borders */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Sleek top shine edge */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+nav i {
+  color: #f2f0e6;
+  font-size: 40px;
+  margin: 0px 18px;
+  cursor: pointer;
+}
+.mi-container {
+  background: #2a7b9b;
+  background: linear-gradient(
+    339deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(173, 8, 255, 1) 100%
+  );
+  height: 100%;
+  padding: 150px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+#current-description,
+#second-description {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#current-task-container,
+#second-task-container {
+  margin: 40px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.tasks {
+  border: 2px solid white;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-family: "Montenegrin Gothic One", serif;
+}
+.head {
+  background-color: #f2f0e6;
+  font-size: 20px;
+  color: rgb(104, 10, 10);
+  padding: 10px;
+}
+
+.body {
+  padding: 20px;
+}
+
+#current-mission,
+#second-mission {
+  border-radius: 20px;
+  min-height: 430px;
+  background: rgba(255, 255, 255, 0.08); /* Translucent background */
+  backdrop-filter: blur(12px); /* Blurs content behind the navbar */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+
+  /* Highlights & Borders */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Sleek top shine edge */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.08); /* Translucent background */
+  backdrop-filter: blur(12px); /* Blurs content behind the navbar */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+
+  /* Highlights & Borders */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Sleek top shine edge */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+.time {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.time span {
+  font-size: 60px;
+}
+.about-dev button {
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  width: 100%;
+  color: rgb(104, 10, 10);
+  font-size: 20px;
+  cursor: pointer;
+}
+.about-dev button i {
+  color: rgb(104, 10, 10);
+}
+#about-popup {
+  display: none;
+  background-color: white;
+flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+}
+.app-name{
+  color: rgb(99, 18, 18);
+}
+#about-popup h3{
+color: black;
+}
+  #about-popup h2{
+    color: black;
+  }
+  #close-btn{
+    background-color: black;
+    margin: 15px;
+    padding:0px 10px ;
+    font-size: 20px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+
+/* mobile responsive */
+@media screen and (max-width: 570px) {
+  nav {
+    padding: 10px;
+    height: 40px;
+    top: 30px;
+    width: 90%;
+  }
+  nav i {
+    color: #f2f0e6;
+    font-size: 20px;
+    margin: 0px;
+    cursor: pointer;
+  }
+  .mi-container {
+    height: 100%;
+    padding: 70px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .time span {
+    font-size: 30px;
+  }
+  .time {
+    padding: 10px;
+  }
+  #current-heading,
+  #second-heading {
+    font-size: 20px;
+  }
+  #current-description,
+  #second-description {
+    font-size: 15px;
+  }
+  .tasks {
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+}
+
+/* --- LAPTOPS & DESKTOPS (e.g., Lenovo ThinkPad / Yoga / IdeaPad) --- */
+/* Targets screens 769px and wider. Perfect for medium-to-large laptops */
+@media screen and (min-width: 570px) and (max-width: 884px) {
+  nav {
+    padding: 10px;
+    height: 40px;
+    top: 30px;
+    width: 90%;
+  }
+  nav i {
+    color: #f2f0e6;
+    font-size: 20px;
+    margin: 0px;
+    cursor: pointer;
+  }
+  .mi-container {
+    height: 100%;
+    padding: 70px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .time span {
+    font-size: 30px;
+  }
+  .time {
+    padding: 10px;
+  }
+  #current-heading,
+  #second-heading {
+    font-size: 20px;
+  }
+  #current-description,
+  #second-description {
+    font-size: 15px;
+  }
+  .tasks {
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+}
